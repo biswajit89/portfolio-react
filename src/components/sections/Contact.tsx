@@ -27,15 +27,38 @@ const Contact: React.FC = () => {
     });
   };
 
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
+
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    setIsSubmitting(true);
+    setSubmitStatus('idle');
     
-    const mailtoLink = `mailto:biswajitnath.iit@gmail.com?subject=Portfolio Contact from ${formData.name}&body=Name: ${formData.name}%0D%0AEmail: ${formData.email}%0D%0A%0D%0AMessage:%0D%0A${formData.message}`;
-    
-    window.open(mailtoLink, '_blank');
-    
-    // Reset form
-    setFormData({ name: '', email: '', message: '' });
+    try {
+      const response = await fetch('https://formspree.io/f/xpwaqjqw', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          name: formData.name,
+          email: formData.email,
+          message: formData.message,
+        }),
+      });
+      
+      if (response.ok) {
+        setSubmitStatus('success');
+        setFormData({ name: '', email: '', message: '' });
+      } else {
+        setSubmitStatus('error');
+      }
+    } catch (error) {
+      setSubmitStatus('error');
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -157,10 +180,17 @@ const Contact: React.FC = () => {
                       <button
                         type="submit"
                         className="w-full px-4 py-2 bg-green-600/20 text-green-400 hover:bg-green-600/30 rounded border border-green-600/50 transition-colors font-mono text-sm disabled:opacity-50"
-                        disabled={!formData.name || !formData.email || !formData.message}
+                        disabled={!formData.name || !formData.email || !formData.message || isSubmitting}
                       >
-                        ./send_message
+                        {isSubmitting ? './sending...' : './send_message'}
                       </button>
+                      
+                      {submitStatus === 'success' && (
+                        <div className="text-green-400 text-xs mt-2 font-mono"># Message sent successfully!</div>
+                      )}
+                      {submitStatus === 'error' && (
+                        <div className="text-red-400 text-xs mt-2 font-mono"># Error: Failed to send message</div>
+                      )}
                     </form>
                   </div>
                 </div>
