@@ -35,7 +35,7 @@ const Skills: React.FC = () => {
             </div>
             
             {/* Terminal Content */}
-            <div className="p-6 font-mono text-sm">
+            <div className="p-4 md:p-6 font-mono text-xs md:text-sm">
               <div className="mb-4">
                 <span className="text-green-400">$</span>
                 <span className="text-white ml-2">
@@ -43,12 +43,12 @@ const Skills: React.FC = () => {
                 </span>
               </div>
               
-              <div className="grid md:grid-cols-2 gap-6 pl-4">
+              <div className="grid gap-4 md:grid-cols-2 md:gap-6 pl-2 md:pl-4">
                 {skillCategories.map((category, index) => (
-                  <div key={index} className="bg-gray-800/50 rounded p-4 border border-gray-700/50">
+                  <div key={index} className="bg-gray-800/50 rounded p-3 md:p-4 border border-gray-700/50">
                     <div className="flex items-center gap-2 mb-4">
                       <span className="text-lg">{category.icon}</span>
-                      <h3 className="text-lg font-bold text-yellow-400">## {category.title}</h3>
+                      <h3 className="text-base md:text-lg font-bold text-yellow-400">## {category.title}</h3>
                     </div>
                     
                     <div className="space-y-1">

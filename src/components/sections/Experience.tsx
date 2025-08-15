@@ -44,18 +44,18 @@ const Experience: React.FC = () => {
                         <span className="text-gray-500 ml-2">commit</span>
                       </div>
                       
-                      <div className="flex-1 bg-gray-800/50 rounded p-4 border border-gray-700/50">
+                      <div className="flex-1 bg-gray-800/50 rounded p-3 md:p-4 border border-gray-700/50">
                         <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-3">
                           <div>
-                            <h3 className="text-lg font-bold text-cyan-400">{exp.position}</h3>
-                            <h4 className="text-base text-green-400 font-medium">{exp.company}</h4>
+                            <h3 className="text-base md:text-lg font-bold text-cyan-400">{exp.position}</h3>
+                            <h4 className="text-sm md:text-base text-green-400 font-medium">{exp.company}</h4>
                           </div>
                           <span className="text-gray-400 text-xs md:text-sm font-mono bg-gray-700/50 px-2 py-1 rounded">
                             {exp.duration}
                           </span>
                         </div>
                         
-                        <div className="text-gray-300 text-sm leading-relaxed">
+                        <div className="text-gray-300 text-xs md:text-sm leading-relaxed">
                           <span className="text-purple-400"># </span>
                           {exp.description}
                         </div>

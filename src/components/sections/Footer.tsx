@@ -11,7 +11,7 @@ const Footer: React.FC = () => {
 
   return (
     <footer className="py-8">
-      <div className="container mx-auto px-6">
+      <div className="container mx-auto px-4 md:px-6">
         <div className="max-w-5xl mx-auto">
           {/* Terminal Window */}
           <div className="rounded-lg border border-gray-700/50 shadow-2xl">
@@ -29,7 +29,7 @@ const Footer: React.FC = () => {
             </div>
             
             {/* Terminal Content */}
-            <div className="p-6 font-mono text-sm">
+            <div className="p-4 md:p-6 font-mono text-xs md:text-sm">
               <div className="mb-4">
                 <span className="text-green-400">$</span>
                 <span className="text-white ml-2">
@@ -37,22 +37,22 @@ const Footer: React.FC = () => {
                 </span>
               </div>
               
-              <div className="pl-4">
-                <div className="flex flex-col md:flex-row justify-between items-start md:items-center mb-6">
+              <div className="pl-2 md:pl-4">
+                <div className="flex flex-col md:flex-row justify-between items-start md:items-center mb-4 md:mb-6 gap-4">
                   <div className="mb-4 md:mb-0">
-                    <div className="text-cyan-400 font-bold text-lg">Biswajit Nath</div>
-                    <div className="text-gray-400 text-sm">Sr. Software Engineer</div>
+                    <div className="text-cyan-400 font-bold text-base md:text-lg">Biswajit Nath</div>
+                    <div className="text-gray-400 text-xs md:text-sm">Sr. Software Engineer</div>
                     <div className="text-green-400 text-xs mt-1"># Building the future, one commit at a time</div>
                   </div>
                   
-                  <div className="flex gap-4">
+                  <div className="flex gap-3 md:gap-4 flex-wrap">
                     {socialLinks.map((link, index) => (
                       <a
                         key={index}
                         href={link.url}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="text-blue-400 hover:text-cyan-400 transition-colors duration-200 text-xs"
+                        className="text-blue-400 hover:text-cyan-400 transition-colors duration-200 text-xs whitespace-nowrap"
                         aria-label={link.name}
                       >
                         ./{link.name.toLowerCase()}

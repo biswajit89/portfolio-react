@@ -28,7 +28,7 @@ const About: React.FC = () => {
             </div>
             
             {/* Terminal Content */}
-            <div className="p-6 font-mono text-sm">
+            <div className="p-4 md:p-6 font-mono text-xs md:text-sm">
               <div className="mb-4">
                 <span className="text-green-400">$</span>
                 <span className="text-white ml-2">
@@ -36,7 +36,7 @@ const About: React.FC = () => {
                 </span>
               </div>
               
-              <div className="grid md:grid-cols-2 gap-8 pl-4">
+              <div className="grid md:grid-cols-2 gap-6 md:gap-8 pl-2 md:pl-4">
                 <div>
                   <div className="mb-4">
                     <span className="text-cyan-400"># </span>
@@ -53,9 +53,9 @@ const About: React.FC = () => {
                     I enjoy tackling complex problems and turning ideas into reality.
                   </p>
                   
-                  <div className="bg-gray-800/50 rounded p-4 border border-gray-700/50">
+                  <div className="bg-gray-800/50 rounded p-3 md:p-4 border border-gray-700/50 overflow-x-auto">
                     <div className="text-purple-400 mb-2">const developer = {`{`}</div>
-                    <div className="pl-4 space-y-1 text-sm">
+                    <div className="pl-2 md:pl-4 space-y-1 text-xs md:text-sm">
                       <div><span className="text-blue-400">name:</span> <span className="text-green-300">"{personal.name}"</span>,</div>
                       <div><span className="text-blue-400">role:</span> <span className="text-green-300">"{personal.title}"</span>,</div>
                       <div><span className="text-blue-400">experience:</span> <span className="text-green-300">"{personal.experience}"</span>,</div>

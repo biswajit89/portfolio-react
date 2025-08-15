@@ -34,7 +34,7 @@ const Hero: React.FC = () => {
             </div>
             
             {/* Terminal Content */}
-            <div className="p-6 font-mono text-sm">
+            <div className="p-4 md:p-6 font-mono text-xs md:text-sm">
               <div className="mb-4">
                 <span className="text-green-400">$</span>
                 <span className="text-white ml-2">
@@ -43,19 +43,19 @@ const Hero: React.FC = () => {
               </div>
               
               <div className="mb-6 pl-4">
-                <div className="flex items-center gap-4 mb-4">
+                <div className="flex flex-col sm:flex-row items-center gap-4 mb-4">
                   <img 
-                    src="/profile.svg" 
+                    src="/profile_picture.jpg" 
                     alt="Biswajit Nath" 
-                    className="w-16 h-16 rounded-full border-2 border-green-400/50"
+                    className="w-16 h-16 rounded-full border-2 border-green-400/50 object-cover grayscale hover:grayscale-0 transition-all duration-300"
                   />
                   <div>
-                    <h1 className="text-2xl md:text-3xl font-black text-white mb-1 tracking-tight">
+                    <h1 className="text-xl sm:text-2xl md:text-3xl font-black text-white mb-1 tracking-tight text-center sm:text-left">
                       {personal.name}
                     </h1>
                     <div className="flex items-center gap-2">
                       <span className="w-2 h-2 bg-green-400 rounded-full animate-pulse"></span>
-                      <h2 className="text-lg text-green-400 font-semibold">
+                      <h2 className="text-base sm:text-lg text-green-400 font-semibold">
                         {personal.title}
                       </h2>
                     </div>
@@ -91,8 +91,8 @@ const Hero: React.FC = () => {
               </div>
               
               <div className="pl-4 mb-6">
-                <div className="flex flex-col sm:flex-row gap-3">
-                  <Button size="sm" className="group relative overflow-hidden font-mono">
+                <div className="flex flex-col gap-2 sm:gap-3">
+                  <Button size="sm" className="group relative overflow-hidden font-mono text-xs px-3 py-2 w-full sm:w-auto">
                     <span className="relative z-10 flex items-center text-xs">
                       <span className="mr-2">./</span>
                       <a href="#projects">view_projects</a>
@@ -102,7 +102,7 @@ const Hero: React.FC = () => {
                   <a 
                     href="/Biswajit_Nath_7yrs_java_react_microservice.pdf" 
                     download="Biswajit_Nath_7yrs_java_react_microservice.pdf"
-                    className="inline-flex items-center px-4 py-2 border border-green-500/50 text-green-400 hover:bg-green-500/10 font-mono text-xs rounded transition-all duration-300"
+                    className="inline-flex items-center justify-center px-3 py-2 border border-green-500/50 text-green-400 hover:bg-green-500/10 font-mono text-xs rounded transition-all duration-300 w-full sm:w-auto"
                   >
                     <span className="mr-2">./</span>
                     download_resume
@@ -110,7 +110,7 @@ const Hero: React.FC = () => {
                   
                   <a 
                     href="#contact"
-                    className="inline-flex items-center px-4 py-2 bg-green-600/20 text-green-300 hover:bg-green-600/30 font-mono text-xs rounded transition-all duration-300"
+                    className="inline-flex items-center justify-center px-3 py-2 bg-green-600/20 text-green-300 hover:bg-green-600/30 font-mono text-xs rounded transition-all duration-300 w-full sm:w-auto"
                   >
                     <span className="mr-2">./</span>
                     contact_me
@@ -119,7 +119,7 @@ const Hero: React.FC = () => {
               </div>
               
               <div className="text-gray-500 text-xs">
-                <div className="flex items-center gap-4 flex-wrap">
+                <div className="flex flex-col sm:flex-row items-center gap-2 sm:gap-4 text-center sm:text-left">
                   <span>📍 {personal.location}</span>
                   <span>🟢 Available for hire</span>
                   <span>⚡ Fast response</span>

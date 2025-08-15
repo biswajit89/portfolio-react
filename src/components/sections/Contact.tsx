@@ -53,7 +53,7 @@ const Contact: React.FC = () => {
             </div>
             
             {/* Terminal Content */}
-            <div className="p-6 font-mono text-sm">
+            <div className="p-4 md:p-6 font-mono text-xs md:text-sm">
               <div className="mb-4">
                 <span className="text-green-400">$</span>
                 <span className="text-white ml-2">
@@ -68,7 +68,7 @@ const Contact: React.FC = () => {
                 </div>
               </div>
               
-              <div className="grid md:grid-cols-2 gap-8 pl-4">
+              <div className="grid gap-6 md:grid-cols-2 md:gap-8 pl-2 md:pl-4">
                 <div>
                   <div className="text-yellow-400 font-bold mb-4">## Contact Info</div>
                   
@@ -108,8 +108,8 @@ const Contact: React.FC = () => {
                 <div>
                   <div className="text-yellow-400 font-bold mb-4">## Send Message</div>
                   
-                  <div className="bg-gray-800/50 rounded p-4 border border-gray-700/50">
-                    <form onSubmit={handleSubmit} className="space-y-4">
+                  <div className="bg-gray-800/50 rounded p-3 md:p-4 border border-gray-700/50">
+                    <form onSubmit={handleSubmit} className="space-y-3 md:space-y-4">
                       <div>
                         <label className="text-cyan-400 text-xs block mb-1">name:</label>
                         <input

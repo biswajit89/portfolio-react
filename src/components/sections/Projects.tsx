@@ -29,7 +29,7 @@ const Projects: React.FC = () => {
             </div>
             
             {/* Terminal Content */}
-            <div className="p-6 font-mono text-sm">
+            <div className="p-4 md:p-6 font-mono text-xs md:text-sm">
               <div className="mb-4">
                 <span className="text-green-400">$</span>
                 <span className="text-white ml-2">
@@ -37,22 +37,22 @@ const Projects: React.FC = () => {
                 </span>
               </div>
               
-              <div className="grid md:grid-cols-2 gap-6 pl-4">
+              <div className="grid gap-4 md:grid-cols-2 md:gap-6 pl-2 md:pl-4">
                 {projects.map((project, index) => (
-                  <div key={index} className="bg-gray-800/50 rounded p-4 border border-gray-700/50">
+                  <div key={index} className="bg-gray-800/50 rounded p-3 md:p-4 border border-gray-700/50">
                     <div className="flex items-center gap-2 mb-3">
                       <span className="text-blue-400">📁</span>
-                      <h3 className="text-lg font-bold text-cyan-400">{project.name}</h3>
+                      <h3 className="text-base md:text-lg font-bold text-cyan-400">{project.name}</h3>
                     </div>
                     
                     <div className="mb-4">
                       <span className="text-purple-400"># </span>
-                      <span className="text-gray-300 text-sm leading-relaxed">{project.description}</span>
+                      <span className="text-gray-300 text-xs md:text-sm leading-relaxed">{project.description}</span>
                     </div>
                     
                     <div className="mb-4">
                       <div className="text-yellow-400 text-xs mb-2">## Dependencies:</div>
-                      <div className="flex flex-wrap gap-1">
+                      <div className="flex flex-wrap gap-1 max-w-full">
                         {project.tech.map((tech, techIndex) => (
                           <span key={techIndex} className="bg-gray-700/50 text-green-300 px-2 py-1 rounded text-xs border border-gray-600/50">
                             {tech}
