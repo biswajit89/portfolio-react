@@ -1,0 +1,83 @@
+{
+  "personal": {
+    "name": "Biswajit Nath",
+    "title": "Sr. Software Engineer",
+    "experience": "6+ Years",
+    "email": "biswajitnath.iit@gmail.com",
+    "phone": "+91 9284 995983",
+    "location": "Viman Nagar, Pune, Maharashtra",
+    "summary": "Versatile Sr. Software Engineer with 6+ years of comprehensive experience in front-end and back-end technologies. Proficient in all phases of software development, from conceptualization to implementation. Skilled in Java, Angular, JavaScript, React, and various other technologies. Proven leadership experience mentoring teams and driving technical excellence."
+  },
+  "skills": {
+    "frontend": ["React.js", "Angular", "JavaScript", "TypeScript", "HTML5", "CSS3", "Material Design"],
+    "backend": ["Java", "Spring Boot", "Node.js", "Grails", "Microservices"],
+    "database": ["MySQL", "Snowflake", "Apache Solr", "PostgreSQL"],
+    "tools": ["AWS S3", "Athena", "Git", "Adobe XD", "Illustrator", "Kafka"]
+  },
+  "experience": [
+    {
+      "company": "Securonix India Pvt. Ltd",
+      "position": "Sr. Software Engineer",
+      "duration": "Apr 2021 - Present",
+      "description": "Promoted to Sr. Software Engineer in July 2024. Developed advanced features for SIEM applications using Java, Spring Boot, JavaScript, Solr, React, MySQL, Snowflake, Kafka, Athena, and S3. Implemented search and storage functionalities for incidents, enhancing application performance. Led a project team of 6 members and mentored junior developers."
+    },
+    {
+      "company": "Monet Networks Inc",
+      "position": "UI UX Developer → Sr. UI UX Developer",
+      "duration": "Sept 2018 - Apr 2021",
+      "description": "Promoted to Sr. UI UX Developer in July 2020. Spearheaded the architecture and creation of an AI-powered emotion analysis platform. Led team of 6 members, designed intuitive user interfaces, and facilitated requirements gathering. Leveraged Angular, TypeScript, Node.js, Adobe XD, React, and AWS."
+    }
+  ],
+  "projects": [
+    {
+      "name": "SIEM Security Analytics Platform",
+      "tech": ["Java", "Spring Boot", "React", "Solr", "Snowflake", "AWS S3"],
+      "description": "Next-generation security analytics platform using machine learning and advanced analytics to detect, investigate, and respond to security incidents with deep visibility and actionable insights.",
+      "github": "#",
+      "live": "#"
+    },
+    {
+      "name": "AI-Based Emotion Analysis Platform",
+      "tech": ["Angular", "TypeScript", "Node.js", "MySQL", "Adobe XD"],
+      "description": "AI-driven platform for content quality assessment through user testing campaigns, analyzing emotions, reactions, eye tracking, and head movements to provide comprehensive user engagement insights.",
+      "github": "#",
+      "live": "#"
+    },
+    {
+      "name": "Indoor Localization Mobile App",
+      "tech": ["Android", "Java", "Triangulation Algorithms"],
+      "description": "Innovative Android application for indoor localization utilizing advanced triangulation and trilateration techniques for precise positioning in indoor environments.",
+      "github": "#",
+      "live": "#"
+    },
+    {
+      "name": "University Management System",
+      "tech": ["PHP", "MySQL", "jQuery", "Bootstrap", "Material Design"],
+      "description": "Comprehensive student feedback collection system and department management portal for Assam University with modern responsive design and efficient data management.",
+      "github": "#",
+      "live": "#"
+    }
+  ],
+  "education": [
+    {
+      "degree": "MCS - Masters of Computer Science",
+      "institution": "Assam University, Silchar (Central)",
+      "year": "2015-2017",
+      "gpa": "Distinction"
+    },
+    {
+      "degree": "BCS - Bachelor of Computer Science",
+      "institution": "Assam University, Silchar (Central)",
+      "year": "2011-2014",
+      "gpa": "First Class"
+    }
+  ],
+  "achievements": [
+    "Won Hackathon by developing Spotter GPT product-ready feature",
+    "Snowflake Fundamentals Certification",
+    "Led project team of 6 members at Monet Networks",
+    "Improved system performance by 40% through microservices architecture",
+    "Mentored junior developers and established best practices"
+  ],
+  "languages": ["English", "Bengali", "Hindi", "Assamese"]
+}
