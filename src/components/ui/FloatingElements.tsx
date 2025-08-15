@@ -31,12 +31,14 @@ const FloatingElements: React.FC = () => {
     createElements();
 
     const animateElements = () => {
-      setElements(prev => prev.map(el => ({
-        ...el,
-        y: el.y - el.speed,
-        x: el.x + Math.sin(el.y * 0.01) * 0.5,
-        y: el.y < -10 ? window.innerHeight + 10 : el.y - el.speed
-      })));
+      setElements(prev => prev.map(el => {
+        const newY = el.y - el.speed;
+        return {
+          ...el,
+          x: el.x + Math.sin(el.y * 0.01) * 0.5,
+          y: newY < -10 ? window.innerHeight + 10 : newY
+        };
+      }));
     };
 
     const interval = setInterval(animateElements, 16);

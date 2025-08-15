@@ -220,8 +220,8 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 ## 👨‍💻 Author
 
 **Biswajit Nath**
-- Portfolio: [Your Portfolio URL]
-- LinkedIn: [Your LinkedIn]
+- Portfolio: [https://biswajit-portfolio.vercel.app](https://biswajit-portfolio.vercel.app)
+- LinkedIn: [https://www.linkedin.com/in/bnath9/](https://www.linkedin.com/in/bnath9/)
 - GitHub: [@biswajit89](https://github.com/biswajit89)
 - Email: biswajitnath.iit@gmail.com
 

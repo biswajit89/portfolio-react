@@ -100,8 +100,8 @@ const Hero: React.FC = () => {
                   </Button>
                   
                   <a 
-                    href="/Biswajit_Nath_Resume.pdf" 
-                    download="Biswajit_Nath_Resume.pdf"
+                    href="/Biswajit_Nath_7yrs_java_react_microservice.pdf" 
+                    download="Biswajit_Nath_7yrs_java_react_microservice.pdf"
                     className="inline-flex items-center px-4 py-2 border border-green-500/50 text-green-400 hover:bg-green-500/10 font-mono text-xs rounded transition-all duration-300"
                   >
                     <span className="mr-2">./</span>

@@ -33,28 +33,28 @@
       "name": "SIEM Security Analytics Platform",
       "tech": ["Java", "Spring Boot", "React", "Solr", "Snowflake", "AWS S3"],
       "description": "Next-generation security analytics platform using machine learning and advanced analytics to detect, investigate, and respond to security incidents with deep visibility and actionable insights.",
-      "github": "#",
+      "github": "https://github.com/biswajit89",
       "live": "#"
     },
     {
       "name": "AI-Based Emotion Analysis Platform",
       "tech": ["Angular", "TypeScript", "Node.js", "MySQL", "Adobe XD"],
       "description": "AI-driven platform for content quality assessment through user testing campaigns, analyzing emotions, reactions, eye tracking, and head movements to provide comprehensive user engagement insights.",
-      "github": "#",
+      "github": "https://github.com/biswajit89",
       "live": "#"
     },
     {
       "name": "Indoor Localization Mobile App",
       "tech": ["Android", "Java", "Triangulation Algorithms"],
       "description": "Innovative Android application for indoor localization utilizing advanced triangulation and trilateration techniques for precise positioning in indoor environments.",
-      "github": "#",
+      "github": "https://github.com/biswajit89",
       "live": "#"
     },
     {
       "name": "University Management System",
       "tech": ["PHP", "MySQL", "jQuery", "Bootstrap", "Material Design"],
       "description": "Comprehensive student feedback collection system and department management portal for Assam University with modern responsive design and efficient data management.",
-      "github": "#",
+      "github": "https://github.com/biswajit89",
       "live": "#"
     }
   ],
