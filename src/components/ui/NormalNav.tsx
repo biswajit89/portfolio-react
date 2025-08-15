@@ -86,7 +86,7 @@ const NormalNav: React.FC = () => {
           <button
             key={item.id}
             onClick={() => handleNavigation(item)}
-            className={`group relative flex items-center gap-2 px-4 py-3 rounded-full transition-all duration-500 transform hover:scale-110 font-mono ${
+            className={`group relative flex items-center gap-1 sm:gap-2 px-2 sm:px-4 py-2 sm:py-3 rounded-full transition-all duration-500 transform hover:scale-110 font-mono ${
               isActive(item)
                 ? 'bg-gradient-to-r from-blue-500 to-cyan-500 text-white shadow-lg shadow-blue-500/25 scale-105'
                 : 'text-blue-600 hover:text-blue-700 hover:bg-blue-50'
@@ -94,13 +94,13 @@ const NormalNav: React.FC = () => {
             style={{ transitionDelay: `${index * 50}ms` }}
             title={item.label}
           >
-            <div className={`transition-all duration-300 w-5 h-5 ${
+            <div className={`transition-all duration-300 w-4 h-4 sm:w-5 sm:h-5 ${
               isActive(item) ? 'rotate-12 scale-110' : 'group-hover:scale-110'
             }`}>
               {item.icon}
             </div>
             
-            <span className={`text-xs font-mono font-bold whitespace-nowrap transition-all duration-500 overflow-hidden tracking-wider ${
+            <span className={`text-xs font-mono font-bold whitespace-nowrap transition-all duration-500 overflow-hidden tracking-wider hidden sm:inline ${
               isActive(item) 
                 ? 'opacity-100 max-w-28 ml-1' 
                 : 'opacity-0 max-w-0 ml-0'
