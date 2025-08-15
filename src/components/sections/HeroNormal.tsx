@@ -11,7 +11,7 @@ const HeroNormal: React.FC = () => {
         <div className="max-w-6xl mx-auto text-center">
           <div className="mb-8">
             <img 
-              src="/profile_picture.jpg" 
+              src="./profile_picture.jpg" 
               alt="Biswajit Nath" 
               className="w-32 h-32 rounded-full mx-auto mb-6 object-cover shadow-xl border-4 border-white"
             />

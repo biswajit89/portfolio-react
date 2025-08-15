@@ -45,7 +45,7 @@ const Hero: React.FC = () => {
               <div className="mb-6 pl-4">
                 <div className="flex flex-col sm:flex-row items-center gap-4 mb-4">
                   <img 
-                    src="/profile_picture.jpg" 
+                    src="./profile_picture.jpg" 
                     alt="Biswajit Nath" 
                     className="w-16 h-16 rounded-full border-2 border-green-400/50 object-cover grayscale hover:grayscale-0 transition-all duration-300"
                   />
