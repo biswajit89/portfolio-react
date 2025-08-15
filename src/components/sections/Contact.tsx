@@ -27,10 +27,15 @@ const Contact: React.FC = () => {
     });
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    // Handle form submission here
-    console.log('Form submitted:', formData);
+    
+    const mailtoLink = `mailto:biswajitnath.iit@gmail.com?subject=Portfolio Contact from ${formData.name}&body=Name: ${formData.name}%0D%0AEmail: ${formData.email}%0D%0A%0D%0AMessage:%0D%0A${formData.message}`;
+    
+    window.open(mailtoLink, '_blank');
+    
+    // Reset form
+    setFormData({ name: '', email: '', message: '' });
   };
 
   return (
@@ -151,7 +156,8 @@ const Contact: React.FC = () => {
                       
                       <button
                         type="submit"
-                        className="w-full px-4 py-2 bg-green-600/20 text-green-400 hover:bg-green-600/30 rounded border border-green-600/50 transition-colors font-mono text-sm"
+                        className="w-full px-4 py-2 bg-green-600/20 text-green-400 hover:bg-green-600/30 rounded border border-green-600/50 transition-colors font-mono text-sm disabled:opacity-50"
+                        disabled={!formData.name || !formData.email || !formData.message}
                       >
                         ./send_message
                       </button>

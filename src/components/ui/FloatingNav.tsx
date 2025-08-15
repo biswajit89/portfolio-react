@@ -102,7 +102,7 @@ const FloatingNav: React.FC = () => {
               <button
                 key={item.id}
                 onClick={() => handleNavigation(item)}
-                className={`group relative flex items-center gap-1 px-2 sm:px-4 py-2 sm:py-3 rounded-full transition-all duration-500 transform hover:scale-110 font-mono ${
+                className={`group relative flex items-center justify-center gap-1 p-3 sm:px-4 sm:py-3 rounded-full transition-all duration-500 transform hover:scale-110 font-mono min-h-[44px] min-w-[44px] ${
                   activeSection === item.id
                     ? 'bg-gradient-to-r from-green-500 to-cyan-500 text-black shadow-lg shadow-green-500/25 scale-105'
                     : 'text-green-400 hover:text-green-300 hover:bg-green-500/5 border border-transparent hover:border-green-500/20'
@@ -111,14 +111,14 @@ const FloatingNav: React.FC = () => {
                 title={item.label}
               >
                 {/* Icon with animation */}
-                <div className={`transition-all duration-300 w-4 h-4 sm:w-5 sm:h-5 ${
+                <div className={`transition-all duration-300 w-5 h-5 ${
                   activeSection === item.id ? 'rotate-12 scale-110' : 'group-hover:scale-110'
                 }`}>
                   {item.icon}
                 </div>
                 
                 {/* Label with slide animation */}
-                <span className={`text-xs font-mono font-bold whitespace-nowrap transition-all duration-500 overflow-hidden tracking-wider hidden sm:inline ${
+                <span className={`text-xs font-mono font-bold whitespace-nowrap transition-all duration-500 overflow-hidden tracking-wider hidden md:inline ${
                   activeSection === item.id 
                     ? 'opacity-100 max-w-28 ml-1' 
                     : 'opacity-0 max-w-0 ml-0'

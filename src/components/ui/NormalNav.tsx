@@ -80,48 +80,53 @@ const NormalNav: React.FC = () => {
   };
 
   return (
-    <nav className="fixed bottom-4 md:bottom-6 left-1/2 transform -translate-x-1/2 z-50 bg-white/10 backdrop-blur-xl rounded-full shadow-2xl border border-white/20">
-      <div className="flex items-center gap-1 md:gap-2 px-2 md:px-3 py-2 md:py-3">
-        {navItems.map((item, index) => (
-          <button
-            key={item.id}
-            onClick={() => handleNavigation(item)}
-            className={`group relative flex items-center gap-1 sm:gap-2 px-2 sm:px-4 py-2 sm:py-3 rounded-full transition-all duration-500 transform hover:scale-110 font-mono ${
-              isActive(item)
-                ? 'bg-gradient-to-r from-blue-500 to-cyan-500 text-white shadow-lg shadow-blue-500/25 scale-105'
-                : 'text-blue-600 hover:text-blue-700 hover:bg-blue-50'
-            }`}
-            style={{ transitionDelay: `${index * 50}ms` }}
-            title={item.label}
-          >
-            <div className={`transition-all duration-300 w-4 h-4 sm:w-5 sm:h-5 ${
-              isActive(item) ? 'rotate-12 scale-110' : 'group-hover:scale-110'
-            }`}>
-              {item.icon}
-            </div>
-            
-            <span className={`text-xs font-mono font-bold whitespace-nowrap transition-all duration-500 overflow-hidden tracking-wider hidden sm:inline ${
-              isActive(item) 
-                ? 'opacity-100 max-w-28 ml-1' 
-                : 'opacity-0 max-w-0 ml-0'
-            }`}>
-              {item.label}
-            </span>
-            
-            {/* Active indicator */}
-            {isActive(item) && (
-              <div className="absolute -top-1 -right-1 w-2 h-2 bg-white rounded-full animate-pulse"></div>
-            )}
-            
-            {/* Tooltip */}
-            <div className="absolute bottom-full mb-2 left-1/2 transform -translate-x-1/2 bg-gray-900/90 backdrop-blur-sm text-white text-xs px-3 py-1 rounded-lg opacity-0 group-hover:opacity-100 transition-all duration-300 whitespace-nowrap scale-95 group-hover:scale-100">
-              {item.label}
-            </div>
-            
-            {/* Ripple effect */}
-            <div className="absolute inset-0 rounded-full bg-blue-400/20 scale-0 group-hover:scale-150 transition-transform duration-500 opacity-0 group-hover:opacity-100"></div>
-          </button>
-        ))}
+    <nav className="fixed bottom-4 md:bottom-6 left-1/2 transform -translate-x-1/2 z-50">
+      <div className="relative">
+        {/* Glow effect */}
+        <div className="absolute inset-0 bg-gradient-to-r from-blue-500/20 via-purple-500/20 to-pink-500/20 rounded-full blur-xl animate-pulse"></div>
+        
+        {/* Main navigation */}
+        <div className="relative bg-gradient-to-r from-white/95 via-blue-50/95 to-white/95 backdrop-blur-xl rounded-full px-1 md:px-2 py-1 md:py-2 border border-blue-500/20 shadow-2xl shadow-blue-500/10">
+          <div className="flex items-center gap-0.5 md:gap-1">
+            {navItems.map((item, index) => (
+              <button
+                key={item.id}
+                onClick={() => handleNavigation(item)}
+                className={`group relative flex items-center gap-1 p-3 sm:px-4 sm:py-3 rounded-full transition-all duration-500 transform hover:scale-110 font-mono min-h-[44px] min-w-[44px] ${
+                  isActive(item)
+                    ? 'bg-gradient-to-r from-blue-500 to-cyan-500 text-white shadow-lg shadow-blue-500/25 scale-105'
+                    : 'text-blue-600 hover:text-blue-700 hover:bg-blue-500/5 border border-transparent hover:border-blue-500/20'
+                }`}
+                style={{ transitionDelay: `${index * 50}ms` }}
+                title={item.label}
+              >
+                {/* Icon with animation */}
+                <div className={`transition-all duration-300 w-5 h-5 ${
+                  isActive(item) ? 'rotate-12 scale-110' : 'group-hover:scale-110'
+                }`}>
+                  {item.icon}
+                </div>
+                
+                {/* Label with slide animation */}
+                <span className={`text-xs font-mono font-bold whitespace-nowrap transition-all duration-500 overflow-hidden tracking-wider hidden md:inline ${
+                  isActive(item) 
+                    ? 'opacity-100 max-w-28 ml-1' 
+                    : 'opacity-0 max-w-0 ml-0'
+                }`}>
+                  {item.label}
+                </span>
+                
+                {/* Active indicator dot */}
+                {isActive(item) && (
+                  <div className="absolute -top-1 -right-1 w-2 h-2 bg-blue-400 rounded-full animate-pulse"></div>
+                )}
+                
+                {/* Hover ripple effect */}
+                <div className="absolute inset-0 rounded-full bg-blue-500/10 scale-0 group-hover:scale-100 transition-transform duration-300 opacity-0 group-hover:opacity-100"></div>
+              </button>
+            ))}
+          </div>
+        </div>
       </div>
     </nav>
   );
